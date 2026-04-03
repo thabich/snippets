@@ -7,10 +7,11 @@ export HANDLER=myfunction_handler
 export IAMROLE=arn:aws:iam::............
 ```
 
-```python {filename=myfunctionfile.py} {3}
+```python
+// myfunctionfile.py
 import json
 
-def myfunction_handler(event, context):
++def myfunction_handler(event, context):
     return {
         'statusCode': 200,
         'body': json.dumps('Hello from Lambda!')
