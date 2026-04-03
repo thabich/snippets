@@ -2,4 +2,4 @@
 
 Started 2026-03-23
 
-Collection of snippets found useful during work
+Collection of snippets I found useful during work

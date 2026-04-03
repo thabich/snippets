@@ -32,7 +32,7 @@ aws lambda create-function --function-name $LAMBDAFUNCTION \
     --handler $( basename $MYPYTHON .py).$HANDLER \
     --role $IAMROLE
 
-# Invoke/Test lambda (saves response to outfile(
+# Invoke/Test lambda (saves response to outfile)
 aws lambda invoke --function-name $LAMBDAFUNCTION outfile
 
 # Delete lambda function
