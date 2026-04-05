@@ -17,18 +17,18 @@ metadata:
   name: cert-manager
   namespace: argocd
   annotations:
-    argocd.argoproj.io/sync-wave: "-2" # Install early
+    argocd.argoproj.io/sync-wave: "-2"
 spec:
   project: default
   sources:
   - repoURL: https://charts.jetstack.io
     chart: cert-manager
-    targetRevision: v1.20.1 # Use current version
+    targetRevision: v1.20.1
     helm:
       valueFiles:
       - $values/2-App-Setup/argocd/apps/values/cert-manager.yml
   - repoURL: https://github.com/thabich/kubernetes-dev-environment.git
-    targetRevision: feature/setup # Use current version
+    targetRevision: feature/setup
     ref: values
 
   destination:
@@ -39,7 +39,7 @@ spec:
       selfHeal: true
       prune: true
     syncOptions:
-      - ServerSideApply=true # Critical for CRDs
+      - ServerSideApply=true
       - CreateNamespace=true
 
 
